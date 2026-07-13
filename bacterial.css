@@ -397,3 +397,7 @@ html[dir="ltr"] .bac-chapter-next-grid>a:last-child{text-align:right}
   .bac-chapter-next-grid>div{margin:auto}
   .bac-chapter-next-grid>a{text-align:center!important}
 }
+
+/* Full chapter reset */
+.bac-reset-all{margin-top:9px;border-color:rgba(181,56,56,.25)!important;color:#8f2f2f!important;background:rgba(181,56,56,.055)!important}
+.bac-reset-all:hover{background:rgba(181,56,56,.11)!important;border-color:rgba(181,56,56,.42)!important}

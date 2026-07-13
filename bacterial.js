@@ -21,7 +21,7 @@
       'bank.title':'فلتر السؤال.<br>وبعدين ركّز في القرار.','bank.text':'اختار الموضوع والنوع والصعوبة. يمكنك البحث بالكلمة، حفظ الأسئلة، واستكمال تقدمك لاحقًا من نفس الجهاز.',
       'filter.study':'Study','filter.studySub':'حل وتعلّم فورًا','filter.exam':'Exam','filter.examSub':'الحل في النهاية',
       'filter.topic':'الموضوع','filter.type':'نوع السؤال','filter.difficulty':'الصعوبة','filter.search':'بحث','filter.apply':'ابدأ المجموعة','filter.random':'Random 10','filter.bookmarks':'المحفوظة',
-      'session.label':'CURRENT SESSION','session.score':'النتيجة','session.answered':'تمت الإجابة','session.correct':'إجابات صحيحة','session.saved':'أسئلة محفوظة','session.reset':'إعادة الجلسة',
+      'session.label':'CURRENT SESSION','session.score':'النتيجة','session.answered':'تمت الإجابة','session.correct':'إجابات صحيحة','session.saved':'أسئلة محفوظة','session.reset':'إعادة المجموعة الحالية','session.resetAll':'ابدأ الفصل من الصفر',
       'session.note':'يُحفظ تقدمك على هذا الجهاز. المحتوى تعليمي ولا يستبدل البروتوكولات المحلية أو التقييم الطبي.',
       'question.zoom':'تكبير الصورة','question.savedAnswer':'تم حفظ إجابتك. سيظهر التصحيح عند إنهاء مجموعة الامتحان.','question.previous':'السابق','question.skip':'تخطي','question.next':'التالي',
       'empty.title':'مفيش أسئلة مطابقة للفلاتر','empty.text':'غيّر البحث أو اختار All في أحد الفلاتر وابدأ المجموعة من جديد.',
@@ -43,6 +43,7 @@
       filterSession:'مجموعة مفلترة', randomSession:'تحدي عشوائي', fullSession:'الامتحان الكامل', bookmarksSession:'الأسئلة المحفوظة',
       reviewAnswers:'مراجعة الإجابات',
       resetConfirm:'هل تريد مسح إجابات المجموعة الحالية والبدء من جديد؟',
+      resetAllConfirm:'هل تريد مسح كل الإجابات والتقدم المحفوظ في فصل Bacterial والبدء من الصفر؟ ستظل الأسئلة المحفوظة في المفضلة كما هي.',
       bookmarksEmpty:'لا توجد أسئلة محفوظة حتى الآن.',
       strongestEmpty:'—', reviewEmpty:'—',
       resultAnswered:'مجاب', resultCorrect:'صحيح'
@@ -60,7 +61,7 @@
       'bank.title':'Filter the question.<br>Then focus on the decision.','bank.text':'Choose the topic, format, and difficulty. Search by keyword, save questions, and continue your progress later on the same device.',
       'filter.study':'Study','filter.studySub':'Answer and learn now','filter.exam':'Exam','filter.examSub':'Review at the end',
       'filter.topic':'Topic','filter.type':'Question type','filter.difficulty':'Difficulty','filter.search':'Search','filter.apply':'Start set','filter.random':'Random 10','filter.bookmarks':'Saved',
-      'session.label':'CURRENT SESSION','session.score':'Score','session.answered':'Answered','session.correct':'Correct','session.saved':'Saved questions','session.reset':'Reset session',
+      'session.label':'CURRENT SESSION','session.score':'Score','session.answered':'Answered','session.correct':'Correct','session.saved':'Saved questions','session.reset':'Reset current set','session.resetAll':'Restart chapter from zero',
       'session.note':'Progress is stored on this device. This educational content does not replace clinical assessment or local protocols.',
       'question.zoom':'Enlarge image','question.savedAnswer':'Your answer is saved. Correction will appear when the exam set is completed.','question.previous':'Previous','question.skip':'Skip','question.next':'Next',
       'empty.title':'No questions match these filters','empty.text':'Change the search or choose All in a filter, then start the set again.',
@@ -82,6 +83,7 @@
       filterSession:'Filtered set',randomSession:'Random challenge',fullSession:'Full chapter exam',bookmarksSession:'Saved questions',
       reviewAnswers:'Answer review',
       resetConfirm:'Clear the answers in the current session and start again?',
+      resetAllConfirm:'Clear every answered question and saved progress in the Bacterial chapter and restart from zero? Bookmarks will stay saved.',
       bookmarksEmpty:'No saved questions yet.',
       strongestEmpty:'—',reviewEmpty:'—',
       resultAnswered:'answered',resultCorrect:'correct'
@@ -110,7 +112,7 @@
     [
       'bacTopicJump','bacTopicGrid','bacModeSwitch','bacTopicFilter','bacTypeFilter','bacDifficultyFilter','bacSearch',
       'bacApplyFilters','bacRandomTen','bacBookmarksOnly','bacSessionTitle','bacSessionCount','bacScoreArc','bacScorePercent',
-      'bacAnsweredCount','bacCorrectCount','bacSavedCount','bacResetSession','bacProgressBar','bacQuestionCard',
+      'bacAnsweredCount','bacCorrectCount','bacSavedCount','bacResetSession','bacResetAllProgress','bacProgressBar','bacQuestionCard',
       'bacQuestionId','bacQuestionType','bacQuestionDifficulty','bacQuestionSource','bacBookmarkBtn','bacQuestionTopic',
       'bacQuestionCounter','bacQuestionImageWrap','bacQuestionImage','bacZoomImage','bacQuestionText','bacOptions',
       'bacFeedback','bacFeedbackIcon','bacFeedbackTitle','bacExplanation','bacReasoning','bacExamMessage',
@@ -554,6 +556,19 @@
     }
   }
 
+  function resetAllProgress(){
+    if(!window.confirm(t('resetAllConfirm'))) return;
+    state.answers = {};
+    state.index = 0;
+    state.examSubmitted = false;
+    state.reviewing = false;
+    saveProgress();
+    renderResults();
+    updateSessionSummary();
+    renderQuestion();
+    window.scrollTo({top:document.getElementById('question-bank')?.offsetTop || 0,behavior:'smooth'});
+  }
+
   function toggleBookmark(){
     const q = currentQuestion();
     if(!q) return;
@@ -701,6 +716,7 @@
     els.bacSkipQuestion.addEventListener('click',skipQuestion);
     els.bacBookmarkBtn.addEventListener('click',toggleBookmark);
     els.bacResetSession.addEventListener('click',resetCurrentSession);
+    els.bacResetAllProgress?.addEventListener('click',resetAllProgress);
     els.bacReviewExam.addEventListener('click',reviewSession);
     els.bacRestartExam.addEventListener('click',restartSession);
     els.bacZoomImage.addEventListener('click',openImage);
