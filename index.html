@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07171b" />
+  <meta name="description" content="Derma-Maze — موقع ثنائي اللغة لكتاب Pharmacotherapy of Dermatology." />
+  <title>Derma‑Maze | من العلامة إلى القرار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="scrollProgress"></div>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="shell nav-wrap">
+      <a class="logo" href="#home" aria-label="Derma Maze">
+        <span class="logo-orbit"><i></i></span>
+        <span class="logo-type"><b>DERMA‑MAZE</b><small data-i18n="brand.sub">Clinical Pharmacy Series</small></span>
+      </a>
+      <div class="nav-actions-premium">
+        <button class="lang-pill" id="langBtn" aria-label="Switch language">EN</button>
+        <button class="menu" id="menuBtn" aria-label="فتح القائمة"><span></span><span></span></button>
+      </div>
+      <nav id="mainNav">
+        <a href="#chapters" data-i18n="nav.chapters">الفصول</a>
+        <a href="#free" data-i18n="nav.free">تعلّم مجانًا</a>
+        <a href="clinical-lab.html" data-i18n="nav.lab">Clinical Lab</a>
+        <a href="#preview" data-i18n="nav.preview">مقتطفات</a>
+        <a href="#buy" class="nav-buy"><span data-i18n="nav.order">اطلب الكتاب</span> <em>↗</em></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero book-hero" id="home">
+      <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <div class="kicker"><span></span><b data-i18n="hero.kicker">PHARMACOTHERAPY, MADE VISUAL</b></div>
+          <h1 data-i18n-html="hero.title">مش بس تحفظ المرض.<br><strong>اتعلّم تفكّر فيه.</strong></h1>
+          <p data-i18n-html="hero.text">موقع مرافق لكتاب <b>Derma‑Maze — Volume 1</b> يجمع المقتطفات، الـCases، أسئلة العلاج، والشرح المجاني في تجربة عربية وإنجليزية فخمة.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="clinical-lab.html"><span data-i18n="hero.ctaLab">ادخل الـClinical Lab</span> <span>←</span></a>
+            <a class="button ghost" href="#chapters" data-i18n="hero.ctaChapters">استكشف الفصول</a>
+          </div>
+          <div class="micro-proof">
+            <div><b>06</b><span data-i18n="hero.stat1">أقسام رئيسية</span></div><i></i>
+            <div><b>AR/EN</b><span data-i18n="hero.stat2">تجربة ثنائية اللغة</span></div><i></i>
+            <div><b>3×</b><span data-i18n="hero.stat3">MCQs · Cases · Rx</span></div>
+          </div>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="book-shadow"></div>
+          <div class="book-wrap full-book">
+            <img src="assets/book/cover-01.webp" alt="غلاف كتاب Derma-Maze" />
+            <span class="book-edge"></span>
+            <span class="watermark">OFFICIAL PREVIEW</span>
+          </div>
+          <div class="float-chip chip-one"><span>01</span><b data-i18n="hero.chip1Title">Clinical Cases</b><small data-i18n="hero.chip1Sub">فكّر قبل ما تشوف الحل</small></div>
+          <div class="float-chip chip-two"><span>02</span><b data-i18n="hero.chip2Title">Treatment Challenges</b><small data-i18n="hero.chip2Sub">اختيار العلاج خطوة بخطوة</small></div>
+          <div class="chapter-badge"><small>VOLUME</small><b>01</b><span>Infectious Skin Diseases</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span data-i18n="hero.scroll">اسحب لاكتشاف الكتاب</span> <b>↓</b></div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div><span>CLINICAL IMAGES</span><i>✦</i><span>DRUG TABLES</span><i>✦</i><span>CASES</span><i>✦</i><span>TREATMENT QUESTIONS</span><i>✦</i><span>RED FLAGS</span><i>✦</i><span>BILINGUAL LEARNING</span><i>✦</i></div>
+    </section>
+
+    <section class="section chapter-universe" id="chapters">
+      <div class="shell">
+        <header class="section-head reveal">
+          <div><span class="eyebrow" data-i18n="chapters.eyebrow">BOOK UNIVERSE</span><h2 data-i18n-html="chapters.title">ستة أبواب.<br>هوية واحدة قوية.</h2></div>
+          <p data-i18n="chapters.text">كل فصل له لونه وشخصيته، لكن يفضل جزءًا من نفس العالم البصري: كحلي داكن، تفاصيل ذهبية، صور سريرية، ومحتوى يفتح شهية القارئ من غير ما يحرق الكتاب.</p>
+        </header>
+
+        <div class="chapter-premium-grid" id="chapterCards"></div>
+      </div>
+    </section>
+
+    <section class="section free-zone" id="free">
+      <div class="shell">
+        <header class="section-head light reveal">
+          <div><span class="eyebrow" data-i18n="free.eyebrow">FREE LEARNING ZONE</span><h2 data-i18n-html="free.title">قيمة حقيقية قبل<br>قرار الشراء.</h2></div>
+          <p data-i18n="free.text">الموقع لا يعرض الكتاب كاملًا؛ بل يعطي الزائر جرعة تعليمية محسوبة: مقارنة سريعة، Red Flags، Case قصيرة، ثم يترك التفاصيل والجداول الكاملة للنسخة المطبوعة.</p>
+        </header>
+
+        <div class="free-grid premium-free-grid">
+          <article class="lesson-card lesson-large reveal">
+            <div class="lesson-cover"><img src="assets/img/cellulitis.webp" alt="Cellulitis"><span>5 MIN READ</span></div>
+            <div class="lesson-body">
+              <small data-i18n="free.lessonLabel">FREE MINI LESSON</small>
+              <h3 data-i18n="free.lessonTitle">Erysipelas ولا Cellulitis؟</h3>
+              <p data-i18n="free.lessonText">الاثنان قد يسببان احمرارًا وسخونة وتورمًا، لكن العمق وشكل الحدود وسرعة البداية يغيّرون طريقة التفكير.</p>
+              <div class="compare">
+                <div><b>Erysipelas</b><span data-i18n="free.ery1">سطحية</span><span data-i18n="free.ery2">حدود واضحة ومرتفعة</span><span data-i18n="free.ery3">بداية مفاجئة</span></div>
+                <div><b>Cellulitis</b><span data-i18n="free.cel1">أعمق</span><span data-i18n="free.cel2">حدود غير واضحة</span><span data-i18n="free.cel3">تدرج في التطور</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="lesson-card reveal">
+            <div class="mini-icon">!</div><small>RED FLAGS</small><h3 data-i18n="free.redTitle">إمتى الحالة مش للصيدلية؟</h3>
+            <ul><li data-i18n="free.red1">هبوط ضغط أو سمّية جهازية</li><li data-i18n="free.red2">انتشار سريع للاحمرار</li><li data-i18n="free.red3">ألم أكبر بكثير من شكل الإصابة</li><li data-i18n="free.red4">اشتباه necrotizing infection</li></ul>
+            <button class="text-button preview-trigger" data-preview="assets/book/bacterial-15.webp"><span data-i18n="free.preview">شاهد مقتطفًا من الكتاب</span> <span>↗</span></button>
+          </article>
+
+          <article class="lesson-card reveal">
+            <div class="mini-icon teal">Rx</div><small>TREATMENT MAP</small><h3 data-i18n="free.rxTitle">العلاج مش اسم دواء وخلاص</h3>
+            <p data-i18n="free.rxText">في الـClinical Lab ستجاوب عن شدة الحالة، موضع الإصابة، الحاجة لتغطية MRSA، ومتى يكون العلاج موضعيًا أو جهازيًا.</p>
+            <a class="text-button" href="clinical-lab.html?mode=treatment"><span data-i18n="free.rxCta">جرّب أسئلة العلاج</span> <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab-teaser">
+      <div class="shell lab-teaser-grid reveal">
+        <div class="lab-copy">
+          <span class="eyebrow">DERMA‑MAZE CLINICAL LAB</span>
+          <h2 data-i18n-html="lab.title">صفحة معمولة<br>عشان تختبر تفكيرك.</h2>
+          <p data-i18n="lab.text">اختار بين MCQs سريعة، Clinical Cases، أو Treatment Challenges. فلتر حسب الفصل، شاهد تفسير كل إجابة، وتابع نتيجتك لحظة بلحظة.</p>
+          <div class="lab-features">
+            <span><i>01</i><b data-i18n="lab.f1">أسئلة تشخيص</b></span>
+            <span><i>02</i><b data-i18n="lab.f2">كيسات إكلينيكية</b></span>
+            <span><i>03</i><b data-i18n="lab.f3">اختيارات علاجية</b></span>
+          </div>
+          <a href="clinical-lab.html" class="button primary"><span data-i18n="lab.cta">ابدأ التحدي</span> <span>←</span></a>
+        </div>
+        <div class="lab-mockup">
+          <div class="mock-top"><span>CASE 03 / 06</span><i></i></div>
+          <small>CHOOSE THE BEST NEXT STEP</small>
+          <h3 data-i18n="lab.mockQ">طفل لديه honey-colored crusts محدودة حول الفم. ما أنسب بداية علاجية؟</h3>
+          <div><button>Topical mupirocin</button><button>IV vancomycin</button><button>Oral fluoroquinolone</button></div>
+          <p><b>Clinical reasoning:</b> <span data-i18n="lab.mockExp">الإصابة المحدودة تناسبها المعالجة الموضعية، بينما الانتشار الواسع يحتاج تقييمًا للعلاج الجهازي.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="preview">
+      <div class="shell">
+        <header class="section-head reveal">
+          <div><span class="eyebrow" data-i18n="preview.eyebrow">REAL BOOK PREVIEW</span><h2 data-i18n-html="preview.title">مقتطفات حقيقية.<br>من غير حرق المحتوى.</h2></div>
+          <p data-i18n="preview.text">نماذج محدودة من الصفحات والغلاف تساعد الزائر يشوف مستوى التصميم والتنظيم. في النسخة النهائية نضيف Watermark أقوى ونختار الصفحات بعناية.</p>
+        </header>
+        <div class="page-gallery book-wide-gallery">
+          <button class="page-card tall reveal preview-trigger" data-preview="assets/book/intro-02.webp"><img src="assets/book/intro-02.webp" alt="Introduction"><span><b>Introduction</b><small>Skin structure</small></span><i>01</i></button>
+          <button class="page-card wide reveal preview-trigger" data-preview="assets/book/bacterial-04.webp"><img src="assets/book/bacterial-04.webp" alt="Impetigo"><span><b>Bacterial</b><small>Impetigo key concepts</small></span><i>02</i></button>
+          <button class="page-card reveal preview-trigger" data-preview="assets/book/fungal-05.webp"><img src="assets/book/fungal-05.webp" alt="Tinea pedis"><span><b>Fungal</b><small>Tinea pedis</small></span><i>03</i></button>
+          <button class="page-card reveal preview-trigger" data-preview="assets/book/viral-04.webp"><img src="assets/book/viral-04.webp" alt="Herpes simplex"><span><b>Viral</b><small>HSV key concepts</small></span><i>04</i></button>
+          <button class="page-card wide reveal preview-trigger" data-preview="assets/book/parasitic-04.webp"><img src="assets/book/parasitic-04.webp" alt="Scabies"><span><b>Parasitic</b><small>Scabies overview</small></span><i>05</i></button>
+          <button class="page-card tall reveal preview-trigger" data-preview="assets/book/myco-04.webp"><img src="assets/book/myco-04.webp" alt="Leprosy"><span><b>Mycobacterial</b><small>Leprosy concepts</small></span><i>06</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section buy" id="buy">
+      <div class="shell buy-card reveal">
+        <div class="buy-art"><img src="assets/book/cover-01.webp" alt="غلاف Derma-Maze"><div></div></div>
+        <div class="buy-copy"><span>THE FULL DERMA‑MAZE EXPERIENCE</span><h2 data-i18n-html="buy.title">الموقع يفتح لك الباب.<br>الكتاب يكمّل الرحلة.</h2><p data-i18n="buy.text">الجرعات، الجداول، الخوارزميات، الصور، الحالات والمقارنات الكاملة تظل محفوظة داخل الكتاب، بينما الموقع يبني حوله مجتمعًا تعليميًا مستمرًا.</p>
+          <div class="buy-actions"><a class="button gold" href="https://wa.me/201000000000?text=مرحباً، أريد معرفة تفاصيل كتاب Derma-Maze" target="_blank" rel="noopener"><span data-i18n="buy.cta">اطلب عبر واتساب</span> <span>↗</span></a><a href="clinical-lab.html" class="text-button" data-i18n="buy.lab">جرّب الـClinical Lab</a></div>
+          <small class="replace-note" data-i18n="buy.note">* رقم واتساب والسعر وبيانات الطلب تجريبية وسيتم استبدالها.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <a class="logo footer-logo" href="#home"><span class="logo-orbit"><i></i></span><span class="logo-type"><b>DERMA‑MAZE</b><small>From clinical signs to confident decisions</small></span></a>
+      <p data-i18n="footer.disclaimer">محتوى تعليمي للصيادلة وطلاب الصيدلة، ولا يُعد بديلًا عن التقييم الطبي أو البروتوكولات المحلية.</p>
+      <div><a href="#free" data-i18n="nav.free">المحتوى المجاني</a><a href="clinical-lab.html">Clinical Lab</a><a href="#buy" data-i18n="nav.order">اطلب الكتاب</a></div>
+      <small>© 2026 Eslam Nasser. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <dialog id="pageModal">
+    <button id="closeModal" aria-label="إغلاق">×</button>
+    <div class="modal-paper"><img id="modalImage" alt="صفحة من الكتاب"><span>DERMA‑MAZE • PREVIEW ONLY</span></div>
+  </dialog>
+
+  <script src="shared.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

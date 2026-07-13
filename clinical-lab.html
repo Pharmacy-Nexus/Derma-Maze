@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07171b" />
+  <meta name="description" content="Derma-Maze Clinical Lab — MCQs, cases and treatment challenges." />
+  <title>Clinical Lab | Derma‑Maze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="lab-page">
+  <div id="scrollProgress"></div><div class="noise"></div>
+  <header class="topbar solid-bar">
+    <div class="shell nav-wrap">
+      <a class="logo" href="index.html"><span class="logo-orbit"><i></i></span><span class="logo-type"><b>DERMA‑MAZE</b><small>Clinical Lab</small></span></a>
+      <div class="nav-actions-premium"><button class="lang-pill" id="langBtn">EN</button><button class="menu" id="menuBtn"><span></span><span></span></button></div>
+      <nav id="mainNav"><a href="index.html" data-i18n="labNav.home">الرئيسية</a><a href="#practice" data-i18n="labNav.practice">التدريب</a><a href="#results" data-i18n="labNav.results">النتائج</a><a href="index.html#buy" class="nav-buy"><span data-i18n="nav.order">اطلب الكتاب</span> <em>↗</em></a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lab-hero">
+      <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
+      <div class="shell lab-hero-grid">
+        <div class="reveal">
+          <div class="kicker"><span></span>DERMA‑MAZE CLINICAL LAB</div>
+          <h1 data-i18n-html="labPage.title">اسأل نفسك.<br><strong>وفكّر كصيدلي.</strong></h1>
+          <p data-i18n="labPage.text">صفحة تدريب تجمع بين أسئلة المعلومات، الكيسات السريرية، وأسئلة اختيار العلاج. كل إجابة معها تفسير مختصر ومفتاح للتفكير.</p>
+          <div class="lab-hero-stats"><span><b id="questionTotal">18</b><small data-i18n="labPage.qCount">سؤال تدريبي</small></span><span><b>06</b><small data-i18n="labPage.chCount">فصول</small></span><span><b>3</b><small data-i18n="labPage.modes">أنماط تدريب</small></span></div>
+        </div>
+        <div class="lab-orbit reveal"><div class="orbit-core">Rx</div><span class="orbit o1">MCQ</span><span class="orbit o2">CASE</span><span class="orbit o3">TREATMENT</span><i></i></div>
+      </div>
+    </section>
+
+    <section class="lab-control-zone" id="practice">
+      <div class="shell">
+        <div class="mode-switch reveal" id="modeSwitch">
+          <button class="active" data-mode="mcq"><span>01</span><b data-i18n="modes.mcq">Rapid MCQs</b><small data-i18n="modes.mcqSub">مفاهيم ومفاتيح تشخيص</small></button>
+          <button data-mode="case"><span>02</span><b data-i18n="modes.case">Clinical Cases</b><small data-i18n="modes.caseSub">اقرأ الحالة واختر الأفضل</small></button>
+          <button data-mode="treatment"><span>03</span><b data-i18n="modes.treatment">Treatment Challenges</b><small data-i18n="modes.treatmentSub">اختيار الخطوة العلاجية</small></button>
+        </div>
+
+        <div class="chapter-filter reveal" id="chapterFilter"></div>
+
+        <div class="practice-layout">
+          <aside class="lab-sidebar reveal">
+            <div class="score-ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"></circle><circle id="scoreArc" cx="60" cy="60" r="50"></circle></svg><div><b id="scorePercent">0%</b><small data-i18n="sidebar.score">النتيجة</small></div></div>
+            <div class="side-stat"><span data-i18n="sidebar.correct">إجابات صحيحة</span><b id="correctCount">0</b></div>
+            <div class="side-stat"><span data-i18n="sidebar.answered">تمت الإجابة</span><b id="answeredCount">0</b></div>
+            <button class="reset-btn" id="resetBtn" data-i18n="sidebar.reset">ابدأ من جديد</button>
+            <p data-i18n="sidebar.note">الأسئلة هنا عينات تسويقية تعليمية مستخرجة من موضوعات الكتاب، وليست بديلًا عن البروتوكولات المحلية.</p>
+          </aside>
+
+          <article class="practice-card reveal" id="questionCard">
+            <div class="practice-head"><span id="modeLabel">RAPID MCQ</span><div><i id="practiceBar"></i></div><b id="practiceCount">01 / 06</b></div>
+            <div class="question-meta"><span id="chapterBadge">BACTERIAL</span><small id="difficultyBadge">CORE</small></div>
+            <div class="case-vignette" id="caseVignette"></div>
+            <h2 id="questionText"></h2>
+            <div class="lab-options" id="labOptions"></div>
+            <div class="lab-feedback" id="labFeedback"><span></span><p></p></div>
+            <div class="reasoning-box" id="reasoningBox"><small data-i18n="practice.reasoning">CLINICAL REASONING</small><p id="reasoningText"></p></div>
+            <button class="button primary full" id="nextBtn" disabled><span data-i18n="practice.next">السؤال التالي</span> <span>←</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-zone" id="results">
+      <div class="shell">
+        <header class="section-head reveal"><div><span class="eyebrow">YOUR LEARNING MAP</span><h2 data-i18n-html="results.title">شوف قوتك.<br>واعرف تراجع إيه.</h2></div><p data-i18n="results.text">الملخص يتحدث أثناء الحل، ويعرض أداءك حسب الفصل. في النسخة النهائية يمكن حفظ النتائج وإضافة تحديات أسبوعية.</p></header>
+        <div class="chapter-results" id="chapterResults"></div>
+      </div>
+    </section>
+
+    <section class="section buy lab-buy"><div class="shell buy-card reveal"><div class="buy-art"><img src="assets/book/cover-01.webp" alt="Derma-Maze cover"></div><div class="buy-copy"><span>CONTINUE THE FULL JOURNEY</span><h2 data-i18n-html="labBuy.title">الأسئلة تدربك.<br>الكتاب يبني الأساس.</h2><p data-i18n="labBuy.text">ارجع للشرح الكامل والجداول العلاجية والصور والمقارنات داخل Derma‑Maze، ثم ارجع للـClinical Lab واختبر نفسك مرة أخرى.</p><div class="buy-actions"><a class="button gold" href="index.html#buy"><span data-i18n="nav.order">اطلب الكتاب</span> <span>↗</span></a><a class="text-button" href="index.html" data-i18n="labNav.home">الرئيسية</a></div></div></div></section>
+  </main>
+
+  <footer><div class="shell footer-grid"><a class="logo footer-logo" href="index.html"><span class="logo-orbit"><i></i></span><span class="logo-type"><b>DERMA‑MAZE</b><small>Clinical Lab</small></span></a><p data-i18n="footer.disclaimer">محتوى تعليمي للصيادلة وطلاب الصيدلة، ولا يُعد بديلًا عن التقييم الطبي أو البروتوكولات المحلية.</p><div><a href="index.html">Home</a><a href="#practice">Practice</a><a href="index.html#buy">Order</a></div><small>© 2026 Eslam Nasser. All rights reserved.</small></div></footer>
+
+  <script src="shared.js"></script>
+  <script src="lab.js"></script>
+</body>
+</html>
