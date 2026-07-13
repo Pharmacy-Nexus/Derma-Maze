@@ -1,0 +1,17 @@
+DERMA-MAZE — BACTERIAL CHAPTER PAGE
+
+Upload these files to the ROOT of the existing GitHub repository:
+- bacterial.html
+- bacterial.css
+- bacterial.js
+- bacterial-data-1.js
+- bacterial-data-2.js
+- bacterial-data-3.js
+- home.js (replace the existing file)
+
+No new image folder is required. Clinical images for the 15 image-based questions are embedded inside the question data files, while the page reuses the existing assets folder.
+
+After upload, open:
+https://pharmacy-nexus.github.io/Derma-Maze/bacterial.html
+
+Then refresh with Ctrl + F5.
