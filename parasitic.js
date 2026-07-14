@@ -2,8 +2,8 @@
 (() => {
   'use strict';
 
-  const STORAGE_KEY = 'dermaMazeParasiticProgressV1';
-  const SESSION_SEED_KEY = 'dermaMazeParasiticSeed';
+  const STORAGE_KEY = 'dermaMazeParasiticProgressV2';
+  const SESSION_SEED_KEY = 'dermaMazeParasiticSeedV2';
   const questions = window.PARASITIC_QUESTIONS || [];
   const topics = window.PARASITIC_TOPICS || [];
 
@@ -11,13 +11,13 @@
     ar: {
       'nav.home':'الرئيسية','nav.topics':'الموضوعات','nav.questions':'بنك الأسئلة','nav.results':'النتائج','nav.book':'الكتاب',
       'hero.title':'كل طفيل له دورة.<br><strong>وكل مرحلة تغيّر العلاج.</strong>',
-      'hero.text':'صفحة مستقلة للطفيليات الجلدية تجمع 150 سؤالًا ثنائي اللغة في التشخيص والكيسات والعلاج والصور السريرية، مع تقسيم واضح حسب الكائن والموضوع.',
+      'hero.text':'صفحة مستقلة للطفيليات الجلدية تجمع 80 سؤالًا ثنائي اللغة في التشخيص والكيسات والعلاج والصور السريرية، مع تقسيم واضح حسب الكائن والموضوع.',
       'hero.start':'ابدأ التدريب','hero.explore':'استكشف الموضوعات','hero.q':'سؤالًا','hero.t':'موضوعًا','hero.m':'أنماط',
       'topics.title':'قسّم الفصل.<br>واتقن كل موضوع لوحده.','topics.text':'كل بطاقة تفتح تدريب الموضوع مباشرة، وتوضح عدد الأسئلة وأنواعها مع Clinical Pearl سريعة تساعدك تبدأ من النقطة الصح.',
       'path.title':'ذاكر بطريقتك.<br>مش بطريقة واحدة.','path.text':'ابدأ من Topic محدد، اختبر نفسك في عشرة أسئلة عشوائية، أو ادخل امتحان الفصل الكامل. ترتيب الاختيارات يتغير تلقائيًا حتى لا تحفظ نمط الإجابة.',
       'path.studyTitle':'تعلّم بعد كل سؤال','path.studyText':'الإجابة والتفسير والـClinical Reasoning يظهرون فورًا.','path.studyCta':'ابدأ Study Mode',
       'path.randomTitle':'تحدي سريع من 10','path.randomText':'عشرة أسئلة عشوائية من الفلاتر المختارة أو من الفصل كله.','path.randomCta':'ابدأ Random 10',
-      'path.examTitle':'امتحان 150 سؤالًا','path.examText':'الإجابات لا تظهر حتى تنهي الجلسة وتشاهد تحليل الأداء.','path.examCta':'ابدأ Full Exam',
+      'path.examTitle':'امتحان 80 سؤالًا','path.examText':'الإجابات لا تظهر حتى تنهي الجلسة وتشاهد تحليل الأداء.','path.examCta':'ابدأ Full Exam',
       'bank.title':'فلتر السؤال.<br>وبعدين ركّز في القرار.','bank.text':'اختار الموضوع والنوع والصعوبة. يمكنك البحث بالكلمة، حفظ الأسئلة، واستكمال تقدمك لاحقًا من نفس الجهاز.',
       'filter.study':'Study','filter.studySub':'حل وتعلّم فورًا','filter.exam':'Exam','filter.examSub':'الحل في النهاية',
       'filter.topic':'الموضوع','filter.type':'نوع السؤال','filter.difficulty':'الصعوبة','filter.search':'بحث','filter.apply':'ابدأ المجموعة','filter.random':'Random 10','filter.bookmarks':'المحفوظة',
@@ -51,13 +51,13 @@
     en: {
       'nav.home':'Home','nav.topics':'Topics','nav.questions':'Question bank','nav.results':'Results','nav.book':'Book',
       'hero.title':'Every parasite has a life cycle.<br><strong>Every stage changes the treatment.</strong>',
-      'hero.text':'A dedicated parasitic infestation page with 150 bilingual questions covering diagnosis, clinical cases, treatment selection, and clinical images.',
+      'hero.text':'A dedicated parasitic infestation page with 80 bilingual questions covering diagnosis, clinical cases, treatment selection, and clinical images.',
       'hero.start':'Start practicing','hero.explore':'Explore topics','hero.q':'Questions','hero.t':'Topics','hero.m':'Modes',
       'topics.title':'Break down the chapter.<br>Master one topic at a time.','topics.text':'Each card opens topic-specific practice and shows question volume, formats, and a quick clinical pearl.',
       'path.title':'Study your way.<br>Not just one way.','path.text':'Choose one topic, take a random ten-question challenge, or enter the complete chapter exam. Options are automatically shuffled to remove answer-pattern memorization.',
       'path.studyTitle':'Learn after every question','path.studyText':'The answer, explanation, and clinical reasoning appear immediately.','path.studyCta':'Start Study Mode',
       'path.randomTitle':'Quick random ten','path.randomText':'Ten random questions from the selected filters or the entire chapter.','path.randomCta':'Start Random 10',
-      'path.examTitle':'Full 150-question exam','path.examText':'Answers remain hidden until the session is completed and reviewed.','path.examCta':'Start Full Exam',
+      'path.examTitle':'Full 80-question exam','path.examText':'Answers remain hidden until the session is completed and reviewed.','path.examCta':'Start Full Exam',
       'bank.title':'Filter the question.<br>Then focus on the decision.','bank.text':'Choose the topic, format, and difficulty. Search by keyword, save questions, and continue your progress later on the same device.',
       'filter.study':'Study','filter.studySub':'Answer and learn now','filter.exam':'Exam','filter.examSub':'Review at the end',
       'filter.topic':'Topic','filter.type':'Question type','filter.difficulty':'Difficulty','filter.search':'Search','filter.apply':'Start set','filter.random':'Random 10','filter.bookmarks':'Saved',

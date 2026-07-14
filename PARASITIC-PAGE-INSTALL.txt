@@ -1,10 +1,15 @@
-DERMA-MAZE — PARASITIC CHAPTER INSTALL
+DERMA-MAZE — PARASITIC QUESTION BANK UPDATE (80 CLEANED QUESTIONS)
 
-Upload all files and merge the assets folder into the repository root.
-Replace home.js and viral.html when GitHub asks.
+Replace these files in the repository root:
+- parasitic.html
+- parasitic.js
+- parasitic-data-1.js
+- parasitic-data-2.js
+- parasitic-data-3.js
 
-New page:
-parasitic.html
+Merge the assets folder to add:
+- assets/parasitic-q071.webp through assets/parasitic-q080.webp
 
-Expected URL:
-https://pharmacy-nexus.github.io/Derma-Maze/parasitic.html
+The previous parasitic-q136.webp through parasitic-q150.webp files are no longer used. They may be deleted, but leaving them does not affect the site.
+
+This update changes only the Parasitic Infestation question bank. Other chapter progress remains untouched. Because the Parasitic bank changed from 150 to 80 questions, its saved answers restart under a new local storage version.
