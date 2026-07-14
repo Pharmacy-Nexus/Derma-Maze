@@ -1,0 +1,10 @@
+DERMA-MAZE — VIRAL CHAPTER INSTALL
+
+Upload all files and merge the assets folder into the repository root.
+Replace home.js and fungal.html when GitHub asks.
+
+New page:
+viral.html
+
+Expected URL:
+https://pharmacy-nexus.github.io/Derma-Maze/viral.html
