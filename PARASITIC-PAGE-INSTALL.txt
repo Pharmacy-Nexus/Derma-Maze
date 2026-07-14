@@ -1,0 +1,10 @@
+DERMA-MAZE — PARASITIC CHAPTER INSTALL
+
+Upload all files and merge the assets folder into the repository root.
+Replace home.js and viral.html when GitHub asks.
+
+New page:
+parasitic.html
+
+Expected URL:
+https://pharmacy-nexus.github.io/Derma-Maze/parasitic.html
