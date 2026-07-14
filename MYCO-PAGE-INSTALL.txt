@@ -1,0 +1,9 @@
+DERMA-MAZE — MYCOBACTERIAL PAGE UPDATE
+
+Upload all files from this patch to the repository root.
+Merge the assets folder and replace home.js and parasitic.html when prompted.
+
+New page: myco.html
+Published URL: https://pharmacy-nexus.github.io/Derma-Maze/myco.html
+
+The 100-question chapter stores progress separately from all other chapters.

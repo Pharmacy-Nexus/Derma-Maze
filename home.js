@@ -5,7 +5,7 @@ const chapterData={
     {n:'03',title:'Fungal Infections',tag:'FUNGAL',desc:'Tinea بأنواعها، candidiasis، pityriasis versicolor، onychomycosis، والعلاج الموضعي والجهازي.',topics:['Tinea pedis','Tinea cruris','Onychomycosis'],img:'assets/fungal-01.webp',accent:'#6ebd43',url:'fungal.html'},
     {n:'04',title:'Viral Skin Diseases',tag:'VIRAL',desc:'HSV وVZV وHPV وmolluscum وHFMD والـviral exanthems بصور ومفاتيح تمييز.',topics:['HSV','Warts','HFMD'],img:'assets/viral-01.webp',accent:'#b052a0',url:'viral.html'},
     {n:'05',title:'Parasitic Infestation',tag:'PARASITIC',desc:'Scabies وpediculosis وleishmaniasis وCLM، مع الوقاية والعلاج ومنع إعادة العدوى.',topics:['Scabies','Pediculosis','Leishmaniasis'],img:'assets/parasitic-01.webp',accent:'#349ad5',url:'parasitic.html'},
-    {n:'06',title:'Mycobacterial Skin Diseases',tag:'MYCOBACTERIAL',desc:'Leprosy وcutaneous TB ومفاهيم الـacid-fast bacilli والمناعة الخلوية والعلاج متعدد الأدوية.',topics:['Leprosy','Cutaneous TB','NTM'],img:'assets/myco-01.webp',accent:'#d36a22'}
+    {n:'06',title:'Mycobacterial Skin Diseases',tag:'MYCOBACTERIAL',desc:'Leprosy وcutaneous TB ومفاهيم الـacid-fast bacilli والمناعة الخلوية والعلاج متعدد الأدوية.',topics:['Leprosy','Cutaneous TB','NTM'],img:'assets/myco-01.webp',accent:'#d36a22',url:'myco.html'}
   ],
   en:[
     {n:'01',title:'Introduction to Dermatology',tag:'FOUNDATION',desc:'The starting point: skin structure, functions, epidermal layers, and dermal organization before disease-focused chapters.',topics:['Skin layers','Epidermis','Dermis'],img:'assets/intro-01.webp',accent:'#4aa9d8'},
@@ -13,7 +13,7 @@ const chapterData={
     {n:'03',title:'Fungal Infections',tag:'FUNGAL',desc:'Clinical forms of tinea, candidiasis, pityriasis versicolor, onychomycosis, and topical versus systemic therapy.',topics:['Tinea pedis','Tinea cruris','Onychomycosis'],img:'assets/fungal-01.webp',accent:'#6ebd43',url:'fungal.html'},
     {n:'04',title:'Viral Skin Diseases',tag:'VIRAL',desc:'HSV, VZV, HPV, molluscum, HFMD, and viral exanthems presented with visual diagnostic clues.',topics:['HSV','Warts','HFMD'],img:'assets/viral-01.webp',accent:'#b052a0',url:'viral.html'},
     {n:'05',title:'Parasitic Infestation',tag:'PARASITIC',desc:'Scabies, pediculosis, leishmaniasis, and CLM with treatment, prevention, and reinfection control.',topics:['Scabies','Pediculosis','Leishmaniasis'],img:'assets/parasitic-01.webp',accent:'#349ad5',url:'parasitic.html'},
-    {n:'06',title:'Mycobacterial Skin Diseases',tag:'MYCOBACTERIAL',desc:'Leprosy, cutaneous TB, acid-fast biology, cell-mediated immunity, and multidrug treatment principles.',topics:['Leprosy','Cutaneous TB','NTM'],img:'assets/myco-01.webp',accent:'#d36a22'}
+    {n:'06',title:'Mycobacterial Skin Diseases',tag:'MYCOBACTERIAL',desc:'Leprosy, cutaneous TB, acid-fast biology, cell-mediated immunity, and multidrug treatment principles.',topics:['Leprosy','Cutaneous TB','NTM'],img:'assets/myco-01.webp',accent:'#d36a22',url:'myco.html'}
   ]
 };
 function renderChapters(lang=window.currentDMLang||'ar'){
