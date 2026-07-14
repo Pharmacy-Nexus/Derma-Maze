@@ -1,0 +1,19 @@
+DERMA-MAZE — FUNGAL CHAPTER INSTALL
+
+Upload these items to the repository root:
+- fungal.html
+- fungal.css
+- fungal.js
+- fungal-data-1.js
+- fungal-data-2.js
+- fungal-data-3.js
+- home.js (replace the existing file)
+- bacterial.html (replace the existing file so its Next Chapter button opens Fungal)
+- assets/ (upload/merge the included fungal images)
+
+Do not delete the existing assets folder. Merge the new image files into it.
+
+Published page:
+https://pharmacy-nexus.github.io/Derma-Maze/fungal.html
+
+The page stores answers and bookmarks in localStorage on the same browser/device.
