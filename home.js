@@ -1,6 +1,6 @@
 const chapterData={
   ar:[
-    {n:'01',title:'Introduction to Dermatology',tag:'FOUNDATION',desc:'بداية الرحلة: تركيب الجلد ووظائفه وطبقات الـepidermis والـdermis قبل الدخول في الأمراض.',topics:['Skin layers','Epidermis','Dermis'],img:'assets/intro-01.webp',accent:'#4aa9d8'},
+    {n:'01',title:'Introduction to Dermatology',tag:'FOUNDATION',desc:'بداية الرحلة: تركيب الجلد ووظائفه وطبقات الـepidermis والـdermis قبل الدخول في الأمراض.',topics:['Skin layers','Epidermis','Dermis'],img:'assets/intro-01.webp',accent:'#4aa9d8',url:'intro.html'},
     {n:'02',title:'Bacterial Skin Infections',tag:'BACTERIAL',desc:'من impetigo السطحي إلى cellulitis والـred flags، مع الجداول العلاجية والمقارنات.',topics:['Impetigo','Cellulitis','Folliculitis'],img:'assets/bacterial-01.webp',accent:'#f4bd22',url:'bacterial.html'},
     {n:'03',title:'Fungal Infections',tag:'FUNGAL',desc:'Tinea بأنواعها، candidiasis، pityriasis versicolor، onychomycosis، والعلاج الموضعي والجهازي.',topics:['Tinea pedis','Tinea cruris','Onychomycosis'],img:'assets/fungal-01.webp',accent:'#6ebd43',url:'fungal.html'},
     {n:'04',title:'Viral Skin Diseases',tag:'VIRAL',desc:'HSV وVZV وHPV وmolluscum وHFMD والـviral exanthems بصور ومفاتيح تمييز.',topics:['HSV','Warts','HFMD'],img:'assets/viral-01.webp',accent:'#b052a0',url:'viral.html'},
@@ -8,7 +8,7 @@ const chapterData={
     {n:'06',title:'Mycobacterial Skin Diseases',tag:'MYCOBACTERIAL',desc:'Leprosy وcutaneous TB ومفاهيم الـacid-fast bacilli والمناعة الخلوية والعلاج متعدد الأدوية.',topics:['Leprosy','Cutaneous TB','NTM'],img:'assets/myco-01.webp',accent:'#d36a22',url:'myco.html'}
   ],
   en:[
-    {n:'01',title:'Introduction to Dermatology',tag:'FOUNDATION',desc:'The starting point: skin structure, functions, epidermal layers, and dermal organization before disease-focused chapters.',topics:['Skin layers','Epidermis','Dermis'],img:'assets/intro-01.webp',accent:'#4aa9d8'},
+    {n:'01',title:'Introduction to Dermatology',tag:'FOUNDATION',desc:'The starting point: skin structure, functions, epidermal layers, and dermal organization before disease-focused chapters.',topics:['Skin layers','Epidermis','Dermis'],img:'assets/intro-01.webp',accent:'#4aa9d8',url:'intro.html'},
     {n:'02',title:'Bacterial Skin Infections',tag:'BACTERIAL',desc:'From superficial impetigo to cellulitis and red flags, supported by treatment tables and clear comparisons.',topics:['Impetigo','Cellulitis','Folliculitis'],img:'assets/bacterial-01.webp',accent:'#f4bd22',url:'bacterial.html'},
     {n:'03',title:'Fungal Infections',tag:'FUNGAL',desc:'Clinical forms of tinea, candidiasis, pityriasis versicolor, onychomycosis, and topical versus systemic therapy.',topics:['Tinea pedis','Tinea cruris','Onychomycosis'],img:'assets/fungal-01.webp',accent:'#6ebd43',url:'fungal.html'},
     {n:'04',title:'Viral Skin Diseases',tag:'VIRAL',desc:'HSV, VZV, HPV, molluscum, HFMD, and viral exanthems presented with visual diagnostic clues.',topics:['HSV','Warts','HFMD'],img:'assets/viral-01.webp',accent:'#b052a0',url:'viral.html'},

@@ -1,0 +1,9 @@
+DERMA-MAZE — INTRODUCTION PAGE INSTALL
+
+Upload all files in this patch to the repository root.
+Merge the assets folder and replace home.js and bacterial.html when prompted.
+
+New page: intro.html
+Question count: 45
+Images: 20
+Progress storage is independent from all other chapters.
