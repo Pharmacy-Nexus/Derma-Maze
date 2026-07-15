@@ -1,0 +1,5 @@
+DERMA-MAZE HOME V4.2
+
+Upload home.js and styles.css to the repository root and replace the old files.
+No image or asset changes are required.
+After GitHub Pages deploys, refresh with Ctrl + F5.

@@ -109,7 +109,7 @@ body[dir="ltr"] .topic,body[dir="ltr"] .mode-switch button,body[dir="ltr"] .lab-
   inset-inline-start:-18px;
   top:50%;
   transform:translateY(-52%);
-  z-index:-1;
+  z-index:0;
   font-family:"DM Serif Display",serif;
   font-size:clamp(230px,24vw,390px);
   line-height:.72;
@@ -124,6 +124,28 @@ body[dir="ltr"] .topic,body[dir="ltr"] .mode-switch button,body[dir="ltr"] .lab-
   user-select:none
 }
 .chapter-slide.reverse .chapter-giant-number{inset-inline-start:auto;inset-inline-end:-18px}
+
+/* A fine foreground trace keeps the chapter number readable where the opaque
+   book cover crosses it, while the filled number itself remains behind. */
+.chapter-number-trace{
+  position:absolute;
+  inset-inline-start:-18px;
+  top:50%;
+  transform:translateY(-52%);
+  z-index:4;
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(230px,24vw,390px);
+  line-height:.72;
+  letter-spacing:-25px;
+  color:transparent;
+  -webkit-text-stroke:2px color-mix(in srgb,var(--accent) 82%,#fff);
+  text-shadow:0 1px 2px rgba(0,0,0,.9),0 0 9px color-mix(in srgb,var(--accent) 48%,transparent);
+  opacity:.68;
+  mix-blend-mode:normal;
+  pointer-events:none;
+  user-select:none
+}
+.chapter-slide.reverse .chapter-number-trace{inset-inline-start:auto;inset-inline-end:-18px}
 .chapter-slide-visual{position:relative;display:grid;place-items:center;min-height:405px;z-index:2}
 .chapter-slide.reverse .chapter-slide-visual{order:2}
 .chapter-slide.reverse .chapter-slide-copy{order:1}
@@ -255,6 +277,8 @@ body[dir="ltr"] .chapter-arrow span{transform:scaleX(-1)}
   .chapter-slide-visual img,.chapter-slide.reverse .chapter-slide-visual img{width:184px;height:268px;transform:rotate(-2deg)}
   .chapter-giant-number{font-size:205px;top:185px;inset-inline-start:-10px;letter-spacing:-15px;opacity:.27}
   .chapter-slide.reverse .chapter-giant-number{inset-inline-start:auto;inset-inline-end:-10px}
+  .chapter-number-trace{font-size:205px;top:185px;inset-inline-start:-10px;letter-spacing:-15px;-webkit-text-stroke-width:1.5px;opacity:.58}
+  .chapter-slide.reverse .chapter-number-trace{inset-inline-start:auto;inset-inline-end:-10px}
   .chapter-slide-copy{max-width:none;width:100%}
   .chapter-slide-copy h3{font-size:34px;letter-spacing:-1px;margin:12px 0}
   .chapter-slide-copy>p{font-size:11px;line-height:1.85}

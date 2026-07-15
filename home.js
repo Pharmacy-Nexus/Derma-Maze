@@ -30,6 +30,7 @@ function renderChapters(lang = window.currentDMLang || 'ar') {
   rail.innerHTML = chapterData[lang].map((chapter, index) => `
     <article class="chapter-slide ${index % 2 ? 'reverse' : ''} reveal visible" style="--accent:${chapter.accent};--shine-delay:${(index * 0.32).toFixed(2)}s" data-index="${index}">
       <span class="chapter-giant-number" data-number="${chapter.n}" aria-hidden="true">${chapter.n}</span>
+      <span class="chapter-number-trace" aria-hidden="true">${chapter.n}</span>
       <div class="chapter-slide-visual">
         <div class="chapter-poster-glow"></div>
         <img src="${chapter.img}" alt="${chapter.title}" loading="lazy">
