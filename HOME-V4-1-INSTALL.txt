@@ -1,0 +1,10 @@
+DERMA-MAZE HOME V4.1
+
+Upload all files to the repository root and allow replacement.
+Merge the assets folder; do not delete the other images.
+
+Changed:
+- Animated light sweep inside chapter numbers 01–06
+- Replaced atom mark with a maze mark across the home and chapter pages
+- Changed the top brand subtitle to PHARMACOTHERAPY
+- Reworded the Arabic and English preview headline

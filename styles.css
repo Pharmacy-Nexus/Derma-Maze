@@ -278,3 +278,63 @@ body[dir="ltr"] .chapter-arrow span{transform:scaleX(-1)}
   .micro-proof b{font-size:24px}
   .micro-proof span{font-size:8px}
 }
+
+
+/* =========================================================
+   V4.1 — MAZE BRAND MARK + CHAPTER NUMBER LIGHT SWEEP
+   ========================================================= */
+.logo-maze{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  overflow:hidden;
+  filter:drop-shadow(0 0 14px rgba(244,189,34,.13));
+  transition:transform .28s ease,filter .28s ease
+}
+.logo-maze img{display:block;width:100%;height:100%;object-fit:contain}
+.logo:hover .logo-maze{transform:translateY(-2px) rotate(-2deg);filter:drop-shadow(0 0 19px rgba(244,189,34,.28))}
+.logo-type small{text-transform:uppercase;letter-spacing:1.45px}
+
+.chapter-giant-number{isolation:isolate}
+.chapter-giant-number::after{
+  content:attr(data-number);
+  position:absolute;
+  inset:0;
+  display:block;
+  color:transparent;
+  background:linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 28%,
+    rgba(255,255,255,.08) 36%,
+    rgba(255,255,255,.98) 47%,
+    var(--accent) 54%,
+    rgba(255,255,255,.18) 64%,
+    transparent 76%,
+    transparent 100%
+  );
+  background-size:100% 235%;
+  background-position:50% 165%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  filter:drop-shadow(0 0 10px rgba(255,255,255,.24));
+  opacity:.92;
+  mix-blend-mode:screen;
+  animation:chapter-number-light-sweep 4.2s cubic-bezier(.45,0,.2,1) infinite;
+  animation-delay:var(--shine-delay,0s);
+  pointer-events:none
+}
+@keyframes chapter-number-light-sweep{
+  0%,12%{background-position:50% 165%;opacity:.2}
+  48%{opacity:1}
+  78%{background-position:50% -72%;opacity:.85}
+  100%{background-position:50% -72%;opacity:.18}
+}
+@media(prefers-reduced-motion:reduce){
+  .chapter-giant-number::after{animation:none;background-position:50% 45%;opacity:.45}
+  .logo:hover .logo-maze{transform:none}
+}
+@media(max-width:620px){.logo-maze{width:40px;height:40px;flex-basis:40px;border-radius:12px}}
