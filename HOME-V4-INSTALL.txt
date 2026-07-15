@@ -1,0 +1,17 @@
+DERMA-MAZE HOME V4 — INSTALL
+
+1) ارفع الملفات التالية إلى جذر GitHub repository ووافق على الاستبدال:
+   - index.html
+   - styles.css
+   - home.js
+   - shared.js
+
+2) تم حذف جميع روابط Clinical Lab من الصفحة الرئيسية والـNavbar والـFooter.
+
+3) لحذف الصفحة القديمة نهائيًا من GitHub، احذف الملفين:
+   - clinical-lab.html
+   - lab.js
+
+4) لا تعدّل أو تحذف ملفات صفحات الفصول أو ملفات البيانات؛ التحديث خاص بالـHome فقط.
+
+5) بعد نشر GitHub Pages استخدم Ctrl + F5 لتحديث الكاش.
