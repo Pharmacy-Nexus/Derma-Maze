@@ -1,0 +1,46 @@
+DERMA-MAZE UPDATE CENTER — SETUP
+=================================
+
+FILES
+- updates.html: public update page.
+- admin-updates.html: unlinked admin console (noindex).
+- updates.js / admin-updates.js / updates.css: page logic and design.
+- supabase-config.js: add your project URL and publishable key.
+- supabase-setup.sql: database, security policies, and image bucket.
+
+ONE-TIME SETUP
+1. Create a Supabase project.
+2. Open SQL Editor and run all of supabase-setup.sql.
+3. Open Authentication > Users and create one email/password user.
+4. Copy the user's UUID. In SQL Editor run:
+   insert into public.update_admins (user_id) values ('USER_UUID');
+5. Open Project Settings > API and copy:
+   - Project URL
+   - Publishable key (or legacy anon key)
+6. Put both values in supabase-config.js.
+7. Upload all patch files to the GitHub repository.
+8. Open /admin-updates.html and sign in.
+
+SECURITY
+- The admin page is deliberately not linked and is marked noindex.
+- The URL being hidden is not the security layer.
+- Supabase Auth and Row Level Security allow only user IDs listed in update_admins to write, edit, delete, or upload images.
+- Never put a service_role key inside supabase-config.js or any browser file.
+
+CONTENT FORMAT
+The content fields support simple safe formatting:
+## Subheading
+- Bullet point
+- Bullet point
+Normal paragraph
+
+IMAGES
+- JPG, PNG, or WEBP
+- Maximum 5 MB per image
+- One cover plus multiple gallery images
+
+ADMIN PAGE
+https://pharmacy-nexus.github.io/Derma-Maze/admin-updates.html
+
+PUBLIC PAGE
+https://pharmacy-nexus.github.io/Derma-Maze/updates.html
