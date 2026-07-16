@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pharmacy-nexus.github.io/Derma-Maze/sitemap.xml

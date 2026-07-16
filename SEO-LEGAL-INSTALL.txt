@@ -1,0 +1,24 @@
+DERMA-MAZE — SEO + SHARING + POLICY PAGES
+
+Upload every item in the patch ZIP to the repository root.
+Allow replacement of the existing HTML files, shared.js, and styles.css.
+Merge the assets folder; do not delete the existing assets.
+
+New pages:
+- about.html
+- copyright.html
+- disclaimer.html
+- shipping-returns.html
+- privacy.html
+
+SEO/support files:
+- sitemap.xml
+- robots.txt
+- manifest.webmanifest
+- info.css
+
+New sharing and icon assets are inside assets/.
+After GitHub Pages deploys, use Ctrl + F5.
+
+Important operational note:
+The shipping/returns and privacy pages are written for the current static-site workflow. Update them if payment, analytics, accounts, cloud sync, a form backend, shipping rules, or contact information changes.
